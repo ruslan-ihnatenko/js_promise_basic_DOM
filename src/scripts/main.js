@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 
 const logo = document.querySelector('.logo');
@@ -25,6 +26,18 @@ const promise2 = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-promise1.then(() => {}).catch(() => {});
+promise1
+  .then(() => {
+    console.log('Promise was resolved!');
+  })
+  .catch(() => {
+    console.log('Promise was rejected!');
+  });
 
-promise2.then(() => {}).catch(() => {});
+promise2
+  .then(() => {
+    console.log('Promise was resolved!');
+  })
+  .catch(() => {
+    console.log('Promise was rejected!');
+  });
